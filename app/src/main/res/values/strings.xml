@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">CardViewDemo</string>
+    <string-array name="person_name">
+        <item>Rajveer</item>
+        <item>Rajiv</item>
+        <item>priyanka</item>
+        <item>Rooky</item>
+        <item>Rousy</item>
+        <item>Virkumar</item>
+        <item>Amrendra</item>
+        <item>Amarnath</item>
+        <item>Kedarnath</item>
+        <item>Badrinath</item>
+        <item>Shiva</item>
+        <item>Ravi</item>
+        <item>Ramraj</item>
+        <item>Raguraj</item>
+        <item>Arindam</item>
+        <item>Amorakshi</item>
+        <item>Amirakshi</item>
+        <item>Abirami</item>
+        <item>Skywalk</item>
+        <item>Abhirami</item>
+    </string-array>
+    <string-array name="person_email">
+        <item>dev@abc.com</item>
+        <item>raj@abc.com</item>
+        <item>priya@abc.com</item>
+        <item>ram@abc.com</item>
+        <item>laksman@abc.com</item>
+        <item>sita@abc.com</item>
+        <item>bharat@abc.com</item>
+        <item>satrugan@abc.com</item>
+        <item>karan@abc.com</item>
+        <item>arjun@abc.com</item>
+        <item>kanak@abc.com</item>
+        <item>luv@abc.com</item>
+        <item>kush@abc.com</item>
+        <item>duryodhan@abc.com</item>
+        <item>yudhistir@abc.com</item>
+        <item>Dusala@abc.com</item>
+        <item>raja@abc.com</item>
+        <item>rajib@abs.com</item>
+        <item>amit@abc.com</item>
+        <item>amar@abc.com</item>
+        <item>amaraja@abc.com</item>
+    </string-array>
+    <string-array name="person_phone">
+        <item>12455893212</item>
+        <item>12547896213</item>
+        <item>12365897458</item>
+        <item>21345896571</item>
+        <item>21552145698</item>
+        <item>12548963214</item>
+        <item>12459635412</item>
+        <item>54879963231</item>
+        <item>12458896653</item>
+        <item>12458796321</item>
+        <item>21547896325</item>
+        <item>21548963521</item>
+        <item>25896321548</item>
+        <item>32569856632</item>
+        <item>23658956896</item>
+        <item>25632564785</item>
+        <item>32564789563</item>
+        <item>56324587952</item>
+        <item>36589521458</item>
+        <item>23158964785</item>
+        <item>32658956324</item>
+    </string-array>
+</resources>
