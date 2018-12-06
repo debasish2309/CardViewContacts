@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -21,6 +22,8 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
         this.contacts = contacts;
         this.context = context;        //context for click listener
     }
+
+
 
     @NonNull
     @Override
@@ -38,6 +41,23 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
         holder.person_email.setText(contact.getEmail());
         holder.person_phone.setText(contact.getPhone());
 
+        final int currentPosition = position;
+        final contact infodata = contacts.get(position);
+
+        holder.delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                removeItem(infodata);
+
+            }
+        });
+
+    }
+    private void removeItem(contact infodata){
+        int Currposition = contacts.indexOf(infodata);
+        contacts.remove(Currposition);
+        notifyItemRemoved(Currposition);
+
     }
 
     @Override
@@ -49,13 +69,14 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
 
         ImageView person_image;
         TextView person_name,person_email,person_phone;
+        Button delete;
         //For click Listener
         ArrayList<contact> contacts = new ArrayList<contact>();
         Context context;
 
         //content and ArrayList for clicklistener
 
-        public ContactViewHolder(View view,Context context,ArrayList<contact> contacts) {
+        public ContactViewHolder(final View view, Context context, final ArrayList<contact> contacts) {
             super(view);
             this.contacts = contacts;     //for click listener
             this.context = context;       //for clicklistener
@@ -64,7 +85,21 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
             person_name = view.findViewById(R.id.person_name);
             person_email = view.findViewById(R.id.person_email);
             person_phone = view.findViewById(R.id.person_phone);
+            delete = view.findViewById(R.id.btn_delete);
+
+            /*delete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    if(position != RecyclerView.NO_POSITION){
+                        contacts.remove(position);
+
+                    }
+
+                }
+            });*/
         }
+
 
         //Whole method for clicklistener
 
@@ -81,4 +116,5 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
 
         }
     }
+
 }
