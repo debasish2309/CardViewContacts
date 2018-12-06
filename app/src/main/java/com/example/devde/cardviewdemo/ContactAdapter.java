@@ -57,6 +57,9 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
         int Currposition = contacts.indexOf(infodata);
         contacts.remove(Currposition);
         notifyItemRemoved(Currposition);
+        Intent intent = new Intent(this.context,SomeActivity.class);
+        this.context.startActivity(intent);
+
 
     }
 
@@ -87,17 +90,6 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
             person_phone = view.findViewById(R.id.person_phone);
             delete = view.findViewById(R.id.btn_delete);
 
-            /*delete.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int position = getAdapterPosition();
-                    if(position != RecyclerView.NO_POSITION){
-                        contacts.remove(position);
-
-                    }
-
-                }
-            });*/
         }
 
 
