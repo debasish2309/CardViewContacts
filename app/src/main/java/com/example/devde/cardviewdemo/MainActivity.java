@@ -44,5 +44,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         adapter = new ContactAdapter(list,this);
         recyclerView.setAdapter(adapter);
+
     }
 }
